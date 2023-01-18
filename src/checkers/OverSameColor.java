@@ -1,3 +1,8 @@
+package checkers;
+
+import GameBases.ChessBoard;
+import GameBases.Color;
+
 public class OverSameColor extends Validation{
     @Override
     public boolean Check(ChessBoard board) {

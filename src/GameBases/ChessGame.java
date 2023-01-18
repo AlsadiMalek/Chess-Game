@@ -1,10 +1,12 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+package GameBases;
+
+import checkers.*;
+
 import java.util.Scanner;
 
 public class ChessGame {
     private ChessBoard board;
-    public void startGame(File file,Scanner sc){
+    public void startGame(Scanner in){
         System.out.println();
         board = new ChessBoard();
         Color color = Color.White;
@@ -13,7 +15,7 @@ public class ChessGame {
             System.out.println();
             board.printGrid();
             System.out.println();
-            if(CheckMate.canFixIt(board,color)==false){
+            if(CheckMate.CheckMated(color,board) && CheckMate.canFixIt(board,color)==false){
                 if(Color.White == color) {
                     System.out.println("player " + Color.Black + " wins!");
                 }else
@@ -31,8 +33,10 @@ public class ChessGame {
             }
 
             System.out.println("Enter Piece location and destination eg:(b1 a3)");
-            String loc1 = sc.next();
-            String loc2 = sc.next();
+            String loc1 = in.next();
+            String loc2 = in.next();
+            System.out.println(loc1 + " " + loc2);
+            System.out.println();
 
             Location loc = new Location();
             loc.UserInput(loc1);

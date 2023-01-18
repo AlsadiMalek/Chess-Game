@@ -1,3 +1,10 @@
+package PiecesCollection;
+
+import GameBases.ChessBoard;
+import GameBases.Color;
+import GameBases.Location;
+import GameBases.Square;
+
 public abstract class Piece {
     private Color color;
     boolean firstMove = true;
@@ -22,5 +29,5 @@ public abstract class Piece {
         this.firstMove = firstMove;
     }
     @Override
-    public String toString() {return "Piece";}
+    public String toString() {return "PiecesCollection.Piece";}
 }

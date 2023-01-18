@@ -1,6 +1,16 @@
+package GameBases;
+
 public class Location {
     private int x;
     private int y;
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 
     public int getX() {
         return x;

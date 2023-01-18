@@ -1,3 +1,7 @@
+package GameBases;
+
+import PiecesCollection.Piece;
+
 public class Square {
     private boolean hasPiece;
     private Color squareColor;

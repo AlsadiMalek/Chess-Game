@@ -1,3 +1,9 @@
+package checkers;
+
+import GameBases.ChessBoard;
+import GameBases.Color;
+import GameBases.Location;
+
 public abstract class Validation {
     private Validation nextCheck;
     private int x1, y1;

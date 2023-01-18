@@ -1,13 +1,16 @@
-public class Rook extends Piece{
+package PiecesCollection;
+
+import GameBases.*;
+
+public class Rook extends Piece {
     public Rook(Color color) {
         setColor(color);
     }
 
     @Override
     public boolean canMove(Location begin, Location end, ChessBoard board) {
-        if(begin.getY()-end.getY()==0 || begin.getX()-end.getX()==0)
-            return true;
-        return false;
+        moveAbility movement = new moveAbility(new Straight());
+        return movement.canMove(begin,end,board);
     }
     @Override
     public String toString() {

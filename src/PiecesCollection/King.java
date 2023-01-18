@@ -1,16 +1,19 @@
-public class Queen extends Piece{
-    public Queen(Color color) {
+package PiecesCollection;
+
+import GameBases.*;;
+
+public class King extends Piece {
+    public King(Color color) {
         setColor(color);
     }
 
     @Override
     public boolean canMove(Location begin, Location end, ChessBoard board) {
-        if(begin.getY()-end.getY()==0 || begin.getX()-end.getX()==0)
-            return true;
-        if(Math.abs(begin.getX()-end.getX())==Math.abs(begin.getY()-end.getY()))
+        if(Math.abs(begin.getX()-end.getX())+Math.abs(begin.getY()-end.getY()) == 1)
             return true;
         return false;
     }
+
     @Override
     public String toString() {
         String coloring = "\u001B[3";
@@ -18,7 +21,7 @@ public class Queen extends Piece{
             coloring += "0m";
         else
             coloring += "7m";
-        coloring+="  QUEEN ";
+        coloring+="  KING  ";
         coloring+="\u001B[0m";
         return coloring;
     }

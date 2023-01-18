@@ -1,3 +1,7 @@
+package GameBases;
+
+import PiecesCollection.*;
+
 public class ChessBoard {
     private final int Size = 8;
     private Square[][] spots;
@@ -31,32 +35,32 @@ public class ChessBoard {
                     white = !white;
             }
         }
-        spots[0][0].setPiece( PieceMaker.create("Rook",Color.Black) );
-        spots[0][1].setPiece( PieceMaker.create("Knight",Color.Black) );
-        spots[0][2].setPiece( PieceMaker.create("Bishop",Color.Black) );
-        spots[0][3].setPiece( PieceMaker.create("Queen",Color.Black) );
-        spots[0][4].setPiece( PieceMaker.create("King",Color.Black) );
-        spots[0][5].setPiece( PieceMaker.create("Bishop",Color.Black) );
-        spots[0][6].setPiece( PieceMaker.create("Knight",Color.Black) );
-        spots[0][7].setPiece( PieceMaker.create("Rook",Color.Black) );
+        spots[0][0].setPiece( PieceMaker.create("PiecesCollection.Rook",Color.Black) );
+        spots[0][1].setPiece( PieceMaker.create("PiecesCollection.Knight",Color.Black) );
+        spots[0][2].setPiece( PieceMaker.create("PiecesCollection.Bishop",Color.Black) );
+        spots[0][3].setPiece( PieceMaker.create("PiecesCollection.Queen",Color.Black) );
+        spots[0][4].setPiece( PieceMaker.create("PiecesCollection.King",Color.Black) );
+        spots[0][5].setPiece( PieceMaker.create("PiecesCollection.Bishop",Color.Black) );
+        spots[0][6].setPiece( PieceMaker.create("PiecesCollection.Knight",Color.Black) );
+        spots[0][7].setPiece( PieceMaker.create("PiecesCollection.Rook",Color.Black) );
         for(int i=0;i<Size;i++){
-            spots[1][i].setPiece( PieceMaker.create("Pawn",Color.Black) );
+            spots[1][i].setPiece( PieceMaker.create("PiecesCollection.Pawn",Color.Black) );
         }
         for(int i=0;i<2;i++)
             for(int j=0;j<Size;j++) {
                 spots[i][j].setHasPiece(true);
             }
 
-        spots[7][0].setPiece( PieceMaker.create("Rook",Color.White) );
-        spots[7][1].setPiece( PieceMaker.create("Knight",Color.White) );
-        spots[7][2].setPiece( PieceMaker.create("Bishop",Color.White) );
-        spots[7][3].setPiece( PieceMaker.create("Queen",Color.White) );
-        spots[7][4].setPiece( PieceMaker.create("King",Color.White) );
-        spots[7][5].setPiece( PieceMaker.create("Bishop",Color.White) );
-        spots[7][6].setPiece( PieceMaker.create("Knight",Color.White) );
-        spots[7][7].setPiece( PieceMaker.create("Rook",Color.White) );
+        spots[7][0].setPiece( PieceMaker.create("PiecesCollection.Rook",Color.White) );
+        spots[7][1].setPiece( PieceMaker.create("PiecesCollection.Knight",Color.White) );
+        spots[7][2].setPiece( PieceMaker.create("PiecesCollection.Bishop",Color.White) );
+        spots[7][3].setPiece( PieceMaker.create("PiecesCollection.Queen",Color.White) );
+        spots[7][4].setPiece( PieceMaker.create("PiecesCollection.King",Color.White) );
+        spots[7][5].setPiece( PieceMaker.create("PiecesCollection.Bishop",Color.White) );
+        spots[7][6].setPiece( PieceMaker.create("PiecesCollection.Knight",Color.White) );
+        spots[7][7].setPiece( PieceMaker.create("PiecesCollection.Rook",Color.White) );
         for(int i=0;i<Size;i++){
-            spots[6][i].setPiece( PieceMaker.create("Pawn",Color.White) );
+            spots[6][i].setPiece( PieceMaker.create("PiecesCollection.Pawn",Color.White) );
         }
 
         for(int i=6;i<Size;i++)

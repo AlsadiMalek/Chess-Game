@@ -1,3 +1,8 @@
+package checkers;
+
+import GameBases.ChessBoard;
+import GameBases.Location;
+
 public class CommonMoves {
     private int dirX;
     private int dirY;

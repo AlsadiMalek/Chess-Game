@@ -1,3 +1,8 @@
+package checkers;
+
+import GameBases.*;
+import PiecesCollection.*;
+
 public class validRoat extends Validation{
     @Override
     public boolean Check(ChessBoard board) {

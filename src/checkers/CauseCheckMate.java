@@ -1,3 +1,7 @@
+package checkers;
+
+import GameBases.*;
+
 public class CauseCheckMate extends Validation {
 
     @Override
@@ -15,7 +19,16 @@ public class CauseCheckMate extends Validation {
                     if(tmpBoard.getSquareAt(j,i).getPiece().getColor().equals(color))
                         continue;
                     Location loc = tmpBoard.getSquareAt(j,i).getLocation();
-                    if(tmpBoard.getSquareAt(j,i).getPiece().canMove(loc,kingsLoc,tmpBoard)) {
+
+
+                    Validation validChecker1 = new validMove();
+                    validChecker1.setAll(loc,kingsLoc);
+                    Validation validChecker2 = new validRoat();
+                    validChecker2.setAll(loc,kingsLoc);
+
+                    validChecker1.SetNext(validChecker2);
+
+                    if(validChecker1.Check(tmpBoard)) {
                         setAbility(false);
                         return false;
                     }

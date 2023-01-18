@@ -1,14 +1,18 @@
-public class Bishop extends Piece{
-    public Bishop(Color color) {
+package PiecesCollection;
+
+import GameBases.*;
+
+public class Knight extends Piece {
+    public Knight(Color color) {
         setColor(color);
     }
 
     @Override
     public boolean canMove(Location begin, Location end, ChessBoard board) {
-        if(Math.abs(begin.getX()-end.getX())==Math.abs(begin.getY()-end.getY()))
-            return true;
-        return false;
+        moveAbility movement = new moveAbility(new shapeL());
+        return movement.canMove(begin,end,board);
     }
+
     @Override
     public String toString() {
         String coloring = "\u001B[3";
@@ -16,7 +20,7 @@ public class Bishop extends Piece{
             coloring += "0m";
         else
             coloring += "7m";
-        coloring+=" BISHOP ";
+        coloring+=" KNIGHT ";
         coloring+="\u001B[0m";
         return coloring;
     }

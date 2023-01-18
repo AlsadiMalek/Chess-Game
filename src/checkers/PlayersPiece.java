@@ -1,4 +1,10 @@
-public class PlayersPiece extends Validation{
+package checkers;
+
+import GameBases.ChessBoard;
+import GameBases.Square;
+import checkers.*;
+
+public class PlayersPiece extends Validation {
     @Override
     public boolean Check(ChessBoard board){
         Square spot = board.getSquareAt(getX1(),getY1());

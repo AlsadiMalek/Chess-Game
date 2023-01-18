@@ -1,31 +1,22 @@
+import GameBases.ChessGame;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String []files = {"AtyponTest.txt","test2.txt"};
         ChessGame game = new ChessGame();
-
-
-        String []filename = new String[2];
-        filename[0] = "AtyponTest.txt";
-        filename[1] = "test2.txt";
-        Scanner in = new Scanner(System.in);
         for(int i=0;i<2;i++) {
-            File file = new File(filename[i]);
-            Scanner sc = null;
+            File myFile = new File(files[i]);
+            Scanner in = new Scanner(System.in);
             try {
-                sc = new Scanner(file);
+                in = new Scanner(myFile);
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
-
             System.out.println();
-            System.out.println("Game " +  (i+1));
-            System.out.println();
-            game.startGame(file, in);
-
+            game.startGame(in);
         }
-
     }
 }
